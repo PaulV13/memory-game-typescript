@@ -1,0 +1,34 @@
+
+  .card-container {
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  
+  .card-container.flipped .front {
+    transform: rotateY(0deg);
+  }
+  
+  .card-container.flipped .back {
+    transform: rotateY(180deg);
+  }
+  
+  .card-container .front, .card-container .back {
+    position: absolute;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: -webkit-transform ease 500ms;
+    transition: transform ease 500ms;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-container .front {
+    transform: rotateY(180deg);
+  }
+
+  .card-container .back {
+    background: #f8f6ea;
+    transform: rotateY(0deg);
+  }
